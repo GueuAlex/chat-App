@@ -296,8 +296,8 @@ div .log{
     color: #468669;
 }
 
-.users-list a .status-do .offline{ /* utiliser pour indiquer un status de deconnecter */
-    color: #ccc;
+.offline{ /* utiliser pour indiquer un status de deconnecter */
+    color: rgb(151, 148, 148);
 }
 
 
