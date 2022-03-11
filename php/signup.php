@@ -28,7 +28,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                     $time = time(); // return current time
                     $new_img_name = $time.$img_name;
                     if(move_uploaded_file($tmp_name, "images/".$new_img_name)){//if user upload img to our folder sucessfully
-                        $status = "Active now";//once user signed up then status will active now
+                        $status = "En ligne";//once user signed up then status will active now
                         $random_id = rand(time(),10000000);//creating random id for user
 
                         //isertion des données dans la users de notre BDD

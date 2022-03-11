@@ -1,4 +1,4 @@
-<?php
+<?php 
  while($row = mysqli_fetch_assoc($sql)){
      $sql2 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row['unique_id']}
               OR outgoing_msg_id = {$row['unique_id']}) AND (outgoing_msg_id = {$outgoing_id}
@@ -13,8 +13,8 @@
     // filtre de msg lorsk caracteres > 28
     (strlen($result) > 28) ? $msg = substr($result, 0, 28).'...' : $msg = $result;
    // ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "Moi: ": $you = "";
-   //status en ligne ou pas
-   ($row['status'] == "offline now") ? $offline = "offline" : $offline = "";
+   //status en ligne ou pas 
+   ($row['status'] == "Hors ligne") ? $offline = "offline" : $offline = "";
     $output .= '<a href="chat_box.php?user_id='.$row['unique_id'].'">
                     <div class="content">
                         <img src="php/images/'.$row['img'].'" alt="" srcset="">

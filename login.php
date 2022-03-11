@@ -1,6 +1,8 @@
 <?php
     session_start();
-    if(isset($_SESSION['unique_id'])){
+    if (isset($_SESSION['level']) && $_SESSION['level'] == 'admin') {
+        header("location: admin/admin_dashboard.php");
+    }else if(isset($_SESSION['unique_id'])){
         header("location: users.php");
     }
 ?>
@@ -11,26 +13,26 @@
 <body>
     <div class="wrapper">
         <section class="form login">
-            <header>Chat K'SERV |  Login</header>
+            <header>Chat K'SERV |  connexion</header>
             <form action="#" >
                 <div class="error-text"></div>
-                
+                 
                     <div class="field input log">
-                        <label>Email Address</label>
-                        <input type="text" name="email" placeholder="Enter your Email" id="email">
+                        <label>Addresse Email</label>
+                        <input type="text" name="email" placeholder="Entrez votre Email" id="email">
 
                     </div>
                     <div class="field input">
-                        <label>password</label>
-                        <input type="password" name="password" placeholder="Enter a password" id="psw">
+                        <label>Mot de passe</label>
+                        <input type="password" name="password" placeholder="Entrez le mot de passe" id="psw">
                         <i class="fas fa-eye"></i>
                     </div>
                     
                     <div class="fiel button">
-                        <input type="submit" value="continue to chat">
+                        <input type="submit" value="connexion">
                     </div>
             </form>
-            <div class="link">Not yet signed up? <a href="index.php">Signup Now</a></div>
+            <div class="link">Pas encore s'inscrit ? <a href="index.php">S'inscrire</a></div>
         </section>
     </div>
 

@@ -106,6 +106,16 @@ form .name-details .field:last-child{
     content: "\f070";
     color: #333;
 }
+
+.select{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .form form  .input input{
      height: 40px;
      width: 100%;

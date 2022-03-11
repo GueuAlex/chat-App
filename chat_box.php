@@ -35,7 +35,7 @@
         <form action="#" class="typing-area">
             <input type="text" name="outgoing_id" value="<?= $_SESSION['unique_id'];?>" hidden>
             <input type="text" name="incoming_id" value="<?= $user_id;?>" hidden>
-            <input type="text" class="input-field" name="message" placeholder="Type a message here ..." id="">
+            <input type="text" class="input-field" name="message" placeholder="Ecrire ici..." id="">
             <button><i class="fa fa-arrow-circle-right"></i></button>
         </form>
         </section>

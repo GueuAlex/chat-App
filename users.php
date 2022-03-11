@@ -24,10 +24,10 @@
                        <p><?= $row['status']?></p>
                    </div>
                </div>
-               <a href="php/logout.php?logout_id=<?=$row['unique_id']?>" class="logout">Logout</a>
+               <a href="php/logout.php?logout_id=<?=$row['unique_id']?>" class="logout">Deconnexion</a>
            </header>
            <div class="search">
-               <span class="text">Select an user to start chat</span>
+               <span class="text">Cliquer sur un utilisateur</span>
                <input type="text" name="searchTerm" placeholder="Enter name to search..." id="">
                <button><i class="fas fa-search"></i></button>
            </div>
