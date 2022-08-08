@@ -43,9 +43,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../users.php">
                         <span class="ti-face-smile"></span>
-                        <span>Equipe</span>
+                        <span>Chat</span>
                    </a>
                 </li>
                 <li>

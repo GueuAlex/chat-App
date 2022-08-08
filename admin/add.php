@@ -34,9 +34,10 @@
                 <div class="error-text"></div>
                 <div class="field input">
                         <label>En tant que</label>
-                        <select  class="select" name="level" id="">
-                            <option value="<?= $cat?>"><?= $vue?></option>
+                        <select disabled  class="select" id="">
+                            <option><?= $vue?></option>
                         </select>
+                        <input type="text" name="level" value="<?= $cat?>" hidden>
                     </div>
                 <div class="name-details">
                     <div class="field input">

@@ -5,6 +5,7 @@ $fname = mysqli_real_escape_string($conn, $_POST['fname']);
 $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
+$post = mysqli_real_escape_string($conn, $_POST['post']);
 
 if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
     //verification de l'adresse email
@@ -32,12 +33,13 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                         $random_id = rand(time(),10000000);//creating random id for user
 
                         //isertion des données dans la users de notre BDD
-                        $sql2 = mysqli_query($conn, "INSERT INTO users(unique_id, fname, lname, email, password, img, status) VALUES({$random_id}, '{$fname}','{$lname}', '{$email}', '{$password}', '{$new_img_name}', '{$status}')");
+                        $sql2 = mysqli_query($conn, "INSERT INTO users(unique_id, fname, lname, email, password, img, post, status) VALUES({$random_id}, '{$fname}','{$lname}', '{$email}', '{$password}', '{$new_img_name}', '{$post}', '{$status}')");
                         if($sql2){//if these data inserted
                             $sql3 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
                             if(mysqli_num_rows($sql3) >0){
                                 $row = mysqli_fetch_assoc($sql3);
-                                $_SESSION['unique_id'] = $row['unique_id'];//using this session we used user unique_id in other php file
+                                $_SESSION['level'] = $row['post'];//using this session we used user unique_id in other php file
+                                //header('location:login.php');
                                 echo "success";
                             }
                         }else {

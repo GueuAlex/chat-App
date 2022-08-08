@@ -14,9 +14,9 @@
                 <div class="error-text"></div>
                 <div class="field input">
                         <label>En tant que</label>
-                        <select class="select" name="" id="">
-                            <option value="CC">Conseiller client</option>
-                             <option value="CC">Autres</option>
+                        <select class="select" name="post" id="">
+                            <option value="cc">Conseiller client</option>
+                             <option value="autre">Autre</option>
                         </select>
                     </div>
                 <div class="name-details">

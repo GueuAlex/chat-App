@@ -21,6 +21,11 @@ SET time_zone = "+00:00";
 -- Base de données : `chat`
 --
 
+CREATE DATABASE chat
+    DEFAULT CHARACTER SET = 'utf8mb4';
+
+use chat;
+
 -- --------------------------------------------------------
 
 --
@@ -34,13 +39,7 @@ CREATE TABLE `messages` (
   `msg` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `messages`
---
 
-INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES
-(1, 425522591, 334373254, 'bonjour'),
-(2, 425522591, 558142944, 'bonjour');
 
 -- --------------------------------------------------------
 
@@ -65,14 +64,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uesr_id`, `unique_id`, `fname`, `lname`, `email`, `password`, `img`, `post`, `status`) VALUES
-(2, 425522591, 'Dosso', 'Alex', 'alexandrekla@gmail.com', 'bonjour', '1645377074IMG_20191229_153842_507_1577634064825.jpg', 'admin', 'Hors ligne'),
-(9, 595869813, 'root', 'root', 'root@gmail.com', 'bonjour', '1646957787foot.jpg', 'admin', 'Hors ligne'),
-(10, 876603570, 'Boni', 'Esther', 'boni@gmail.com', 'bonjour', '1646957881facebook_logos_PNG19764.png', 'cc', 'Hors ligne'),
-(11, 332201671, 'Kouadio', 'Ethy', 'ethy@gmail.com', 'bonjour', '1646957966IMG_20191229_153842_507_1577634064825.jpg', 'cc', 'Hors ligne'),
-(12, 554786896, 'Alexandra', 'Esther', 'alex@gmail.com', 'bonjour', '1646958058foot.jpg', 'cc', 'Hors ligne'),
-(13, 85570466, 'Coubaly', 'Zie', 'zie@gmail.com', 'bonjour', '1646958107IMG_20191229_155023_345.jpg', 'autre', 'Hors ligne'),
-(14, 1534129435, 'Gbery', 'Evrard', 'gbery@gmail.com', 'bonjour', '1646958178IMG_20191229_155027_096.jpg', 'autre', 'Hors ligne');
-
+(1, 595869813, 'root', 'root', 'root@gmail.com', 'root', '1643665231foot.jpg', 'admin', 'Hors ligne');
 --
 -- Index pour les tables déchargées
 --
